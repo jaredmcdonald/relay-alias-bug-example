@@ -1,0 +1,17 @@
+union ContentUnion = URLRequired | URLNotRequired
+
+type Home {
+  content: [ContentUnion]
+}
+
+type Query {
+  home: Home
+}
+
+type URLNotRequired {
+  url: String
+}
+
+type URLRequired {
+  url: String!
+}
